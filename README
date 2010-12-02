@@ -1,0 +1,20 @@
+A collection of u-boot command scripts for booting mostly Overo Tide and
+Beagleboard-xM boards that don't have NAND to save customizations.
+
+tide-mmc-boot - Overo Tide, simple MMC boot, no video, 720 MHz
+
+tide-nfs-boot - Overo Tide, simple NFS boot, no video, 720 MHz, the IP addresses
+	should be customized. Also the ethaddr setting depending on your board.
+	You can get a valid ethaddr by booting the tide-mmc-boot first and then
+	checking the ethaddr that the Linux driver uses.
+
+I'll add the xM scripts after some testing.
+
+
+make-boot-script.sh - Generates a boot.scr file that the OMAP3's u-boot are
+	built to look for.
+
+
+You can always modify the <u-boot>/include/configs/omap3_overo.h or the
+omap3_beagle.h files with your customizations and avoid the need for boot.scr
+customizations.
