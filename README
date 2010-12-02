@@ -1,7 +1,15 @@
-Some u-boot command scripts for booting mostly Overo Tide and Beagleboard-xM 
-boards. These boards don't have NAND to save u-boot customizations so a boot.scr
-file is used for this. The behaviour to look for a boot.scr file is built into
-the default Overo and Beagleboard bootloaders.
+Some u-boot command scripts for Overo Tide and Beagleboard-xM boards. These 
+boards don't have NAND to save u-boot customizations so a boot.scr file is used.
+
+The behaviour to look for a file called 'boot.scr' is built into the default
+bootloaders for these boards.
+
+
+make-boot-script.sh - Generates a boot.scr file from the command script file you
+	pass as an argument.
+
+
+Command Script Files
 
 tide-mmc-boot - Overo Tide, simple MMC boot, no video, 720 MHz
 
@@ -21,12 +29,8 @@ tide-nfs-boot - Overo Tide, simple NFS boot, no video, 720 MHz, the IP addresses
 I'll add the xM scripts after some more testing.
 
 
-make-boot-script.sh - Generates a boot.scr file that the OMAP3 bootloaders look
-	for.
-
-
 An alternative to this boot.scr stuff, is to modify the u-boot source code
-directly with your customizations.
+directly with your customizations and rebuild it.
 
 <u-boot-src>/include/configs/omap3_overo.h 
 or 
