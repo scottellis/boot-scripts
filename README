@@ -21,17 +21,17 @@ tide-nfs-boot - Overo Tide, simple NFS boot, no video, 720 MHz, the IP addresses
 I'll add the xM scripts after some more testing.
 
 
-make-boot-script.sh - Generates a boot.scr file that the OMAP3's u-boot are
-	built to look for.
+make-boot-script.sh - Generates a boot.scr file that the OMAP3 bootloaders look
+	for.
 
 
-You can modify the built-in behavior of u-boot by modifying 
+An alternative to this boot.scr stuff, is to modify the u-boot source code
+directly with your customizations.
 
 <u-boot-src>/include/configs/omap3_overo.h 
 or 
 <u-boot-src>/include/configs/omap3_beagle.h 
 
-and rebuilding u-boot. 
 
-This will speed you boot times a little.
+This will speed your boot times a little.
 
