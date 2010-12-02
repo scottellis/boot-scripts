@@ -14,7 +14,7 @@ Command Script Files
 tide-mmc-boot - Overo Tide, simple MMC boot, no video, 720 MHz
 
 tide-nfs-boot - Overo Tide, simple NFS boot, no video, 720 MHz, the IP addresses
-	should be customized. 
+	and NFS mount point should be customized. 
 
 	If you are using an older expansion board without an EEPROM storing the
 	ethernet MAC, you will have to add a
