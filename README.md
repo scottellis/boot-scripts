@@ -55,6 +55,13 @@ el-nfs-boot
 Same customer. A network booting script.
 
 
+default-overo-boot
+------
+Taken from a fairly recent <u-boot>/include/configs/omap3_overo.h file.
+
+I did not test this yet. More for reference then use since this is already the
+built-in behaviour.
+
 
 Customize U-Boot Config
 ======
