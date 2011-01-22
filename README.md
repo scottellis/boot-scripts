@@ -41,7 +41,7 @@ Command Script Files
 I'll add the xM scripts after some more testing.
 
 
-An alternative to this boot.scr stuff, is to modify the u-boot source code
+An alternative to this boot.scr stuff is to modify the u-boot source code
 directly with your customizations and rebuild it.
 
 <u-boot-src>/include/configs/omap3_overo.h 
