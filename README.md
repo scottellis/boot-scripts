@@ -11,6 +11,8 @@ Overos and Beagleboards with NAND also look for the boot.scr file. It is sometim
 convenient with customers to give them a boot.scr rather then ask them to make
 u-boot environment changes manually.
 
+I'll add the xM scripts after some more testing.
+
 
 make-boot-script.sh
 ------
@@ -18,7 +20,7 @@ Generates a boot.scr file from the command script file you
 pass as an argument.
 
 
-Command Script Files
+Example Script Files
 =======
 
 
@@ -44,7 +46,7 @@ uses.
 
 el-mmc-boot
 ------
-A customer script file. Sets aside some reserved memory for a camera 
+A customer script file for Overo. Sets aside some reserved memory for a camera 
 driver. Also sets up i2c-bus speed.
 
 
@@ -53,8 +55,9 @@ el-nfs-boot
 Same customer. A network booting script.
 
 
-I'll add the xM scripts after some more testing.
 
+Customize U-Boot Config
+======
 An alternative to this boot.scr stuff is to modify the u-boot source code
 directly with your customizations and rebuild it.
 
