@@ -1,0 +1,13 @@
+setenv ipaddr 192.168.4.60
+setenv netmask 255.255.255.0
+setenv serverip 192.168.4.4
+setenv gatewayip 192.168.4.4
+setenv hostname xm
+setenv ip "${ipaddr}:${serverip}:${gatewayip}:${netmask}:${hostname}:usb0:none"
+setenv nfsroot /exports/beagle
+setenv loadaddr 0x82000000
+setenv console ttyS2,115200n8
+setenv bootargs "console=ttyS2,115200n8 mpurate=800 vram=12M camera=li5m03 root=/dev/nfs rootfstype=nfs ip=${ip} nfsroot=${nfsroot} rootwait"
+fatload mmc 0 ${loadaddr} uImage
+bootm ${loadaddr}
+

@@ -1,0 +1,6 @@
+setenv loadaddr 0x82000000
+setenv console ttyS2,115200n8
+setenv bootargs "console=ttyS2,115200n8 mpurate=800 camera=li5m03 root=/dev/mmcblk0p2 rw rootfstype=ext3 rootwait"
+fatload mmc 0 ${loadaddr} uImage
+bootm ${loadaddr}
+

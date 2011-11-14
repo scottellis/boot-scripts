@@ -1,0 +1,13 @@
+setenv ethaddr B2:34:7A:A3:07:BD
+setenv ipaddr 192.168.4.50
+setenv netmask 255.255.255.0
+setenv serverip 192.168.4.4
+setenv gatewayip 192.168.4.4
+setenv hostname overo
+setenv ip "${ipaddr}:${serverip}:${gatewayip}:${netmask}:${hostname}:eth0:none"
+setenv nfsroot /exports/overo
+setenv bootargs "console=ttyS2,115200n8 mpurate=500 i2c_bus=3,100 root=/dev/nfs rootfstype=nfs ip=${ip} nfsroot=${nfsroot} rootwait"
+setenv loadaddr 0x82000000
+tftp ${loadaddr} uImage
+bootm ${loadaddr}
+

@@ -1,0 +1,3 @@
+setenv bootargs "console=ttyO2,115200n8 mpurate=800 root=/dev/mmcblk0p2 rw rootfstype=ext3 rootwait"
+fatload mmc 0 0x82000000 uImage
+bootm 0x82000000 
